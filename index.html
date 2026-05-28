@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1440">
+<title>Hiberg — Техника, опережающая тренды</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #000; color: #fff; font-family: 'Manrope', system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  body { min-width: 1440px; overflow-x: hidden; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; }
+  button:focus-visible, a:focus-visible { outline: 2px solid #049346; outline-offset: 2px; }
+  ::selection { background: #049346; color: #fff; }
+  /* Hide scrollbars on horizontal scrollers but allow scrolling */
+  .hi-scroller::-webkit-scrollbar { height: 0; width: 0; display: none; }
+  .hi-scroller { scrollbar-width: none; -ms-overflow-style: none; }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="src/Primitives.jsx"></script>
+<script type="text/babel" src="src/Header.jsx"></script>
+<script type="text/babel" src="src/Hero.jsx"></script>
+<script type="text/babel" src="src/Innovations.jsx"></script>
+<script type="text/babel" src="src/World.jsx"></script>
+<script type="text/babel" src="src/Reels.jsx"></script>
+<script type="text/babel" src="src/TopSales.jsx"></script>
+<script type="text/babel" src="src/Catalog.jsx"></script>
+<script type="text/babel" src="src/Tours3D.jsx"></script>
+<script type="text/babel" src="src/VideoBlock.jsx"></script>
+<script type="text/babel" src="src/Contact.jsx"></script>
+<script type="text/babel" src="src/Footer.jsx"></script>
+
+<script type="text/babel">
+function App() {
+  return (
+    <>
+      <Header />
+      <Hero />
+      <Innovations />
+      <World />
+      <Reels />
+      <TopSales />
+      <Catalog />
+      <Tours3D />
+      <VideoBlock />
+      <Contact />
+      <Footer />
+    </>
+  );
+}
+ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+</script>
+</body>
+</html>

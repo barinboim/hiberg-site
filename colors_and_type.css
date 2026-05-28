@@ -1,0 +1,278 @@
+/* ────────────────────────────────────────────────────────────────
+   Hiberg Design System — Colors & Type
+   Primary type: Rooftop (display + headings; commercial trial files in /fonts)
+   Secondary type: Manrope (body, web, long-form, slide UI; Google Fonts)
+     — Manrope replaces Helvetica Neue everywhere in this system (per brand owner).
+   Tertiary / fallback: "Helvetica Neue" / system-ui (Mac-only fallback)
+   ──────────────────────────────────────────────────────────────── */
+
+/* ── Webfonts ──────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 100;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Thin.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 200;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Extralight.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 300;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Light.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Book.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 450;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Medium.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Bold.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop";
+  font-weight: 800;
+  font-style: normal;
+  src: url("./fonts/Rooftop-Extrabold.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop Mono";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./fonts/RooftopMono-Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop Mono";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/RooftopMono-Medium.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rooftop Mono";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./fonts/RooftopMono-Bold.otf") format("opentype");
+  font-display: swap;
+}
+
+/* Manrope (secondary) — loaded from Google Fonts in pages that use it.
+   Reference @import for self-contained pages:
+   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+*/
+
+:root {
+  /* ── BRAND CORE — never deviate ──────────────────────────────── */
+  --hi-black:        #000000;   /* Pantone Black 6 C */
+  --hi-white:        #FFFFFF;
+  --hi-green:        #049346;   /* Pantone 355 C — primary accent */
+
+  /* ── EXTENDED PALETTE ────────────────────────────────────────── */
+  --hi-graphite:     #333434;   /* Pantone Cool Gray 11 C — neutral dark */
+  --hi-orange:       #E14F26;   /* Pantone 7625 C — alert / energy accent */
+  --hi-cream:        #FEF4E8;   /* warm light surface — used for product brand-on-cream */
+  --hi-stone-50:     #F5F5F4;   /* near-white surface */
+  --hi-stone-100:   #F4F3F3;   /* logo wordmark fill */
+  --hi-stone-200:   #E1E1E1;
+  --hi-stone-300:   #D2D2D5;
+  --hi-stone-400:   #BEBFC3;
+  --hi-stone-500:   #999896;
+  --hi-stone-600:   #8E9095;   /* "muted logo" on light bg */
+  --hi-ink:          #1A1A1C;
+
+  /* ── SEMANTIC — dark theme is canonical ──────────────────────── */
+  --bg-page:         var(--hi-black);
+  --bg-card:         rgba(255, 255, 255, 0.10);   /* tile on dark bg */
+  --bg-card-border:  rgba(255, 255, 255, 0.25);
+
+  --fg-1:            var(--hi-white);              /* primary text */
+  --fg-2:            rgba(255, 255, 255, 0.75);    /* secondary text */
+  --fg-3:            rgba(255, 255, 255, 0.50);    /* muted / captions / page subtitle */
+  --fg-4:            rgba(255, 255, 255, 0.25);    /* hairlines, dividers */
+
+  --accent:          var(--hi-green);
+  --accent-fg:       var(--hi-white);
+
+  --danger:          var(--hi-orange);
+
+  /* ── SIGNATURE GRADIENT (vertical, black→green is THE element) ─ */
+  --grad-brand:      linear-gradient(180deg, #000000 0%, #049346 100%);
+  --grad-brand-rev:  linear-gradient(180deg, #049346 0%, #000000 100%);
+  --grad-soft:       radial-gradient(60% 60% at 50% 100%, #049346 0%, #000000 74%);
+
+  /* ── SPACING (8pt base; layout uses 24 / 40 / 80 / 120) ─────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  32px;
+  --space-8:  40px;     /* page margin */
+  --space-9:  60px;
+  --space-10: 80px;
+  --space-11: 120px;
+  --space-12: 186px;    /* large header padding from guideline */
+
+  /* ── RADII (tiles use a single canonical 15px) ───────────────── */
+  --radius-xs:  4px;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  15px;   /* canonical card / tile radius */
+  --radius-xl:  24px;
+  --radius-pill: 999px;
+
+  /* ── HAIRLINES ───────────────────────────────────────────────── */
+  --hairline:        1px solid rgba(255,255,255,0.25);
+  --hairline-strong: 1px solid rgba(255,255,255,0.50);
+
+  /* ── ELEVATION — the system avoids drop shadows on dark bg.
+        Instead it uses translucent fill + hairline.
+        Light-mode tokens kept for documentation only. ─────────── */
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.06), 0 1px 1px rgba(0,0,0,0.04);
+  --shadow-2: 0 4px 12px rgba(0,0,0,0.10);
+  --shadow-3: 0 12px 32px rgba(0,0,0,0.16);
+
+  /* ── MOTION ──────────────────────────────────────────────────── */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-emph:     cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast:   120ms;
+  --dur-base:   200ms;
+  --dur-slow:   320ms;
+
+  /* ── TYPE FAMILIES ───────────────────────────────────────────── */
+  --font-display: "Rooftop", "Manrope", "Helvetica Neue", system-ui, sans-serif;   /* headlines, slogans, benefits */
+  --font-body:    "Manrope", "Helvetica Neue", system-ui, sans-serif;                 /* long-form, web */
+  --font-ui:      "Manrope", "Helvetica Neue", system-ui, sans-serif;                 /* slide UI labels — Manrope replaces Helvetica Neue */
+  --font-mono:    "Rooftop Mono", ui-monospace, "SF Mono", monospace;
+
+  /* ── TYPE SCALE (1920×1080 deck-native; scale down for product UI) */
+  --type-tracking-tight: -0.030em;   /* display */
+  --type-tracking-snug:  -0.020em;   /* 24px UI */
+  --type-tracking-normal: 0em;
+
+  /* Display (Rooftop / Manrope fallback) */
+  --fs-display-xl: 180px; --lh-display-xl: 1.0;     /* page typographic specimen */
+  --fs-display-lg: 150px; --lh-display-lg: 1.0;     /* section number + name */
+  --fs-display-md: 100px; --lh-display-md: 108px;   /* big quote / brand insight */
+  --fs-display-sm: 60px;  --lh-display-sm: 68px;    /* slide title */
+
+  /* Heading */
+  --fs-h1: 60px;  --lh-h1: 68px;
+  --fs-h2: 38px;  --lh-h2: 44px;
+  --fs-h3: 36px;  --lh-h3: 44px;     /* page subtitle */
+  --fs-h4: 24px;  --lh-h4: 32px;
+
+  /* Body */
+  --fs-body-lg: 27px; --lh-body-lg: 37px;   /* description / sidebar copy */
+  --fs-body:    20px; --lh-body:    28px;   /* canonical UI body */
+  --fs-body-sm: 16px; --lh-body-sm: 24px;
+  --fs-caption: 13px; --lh-caption: 18px;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   SEMANTIC TYPE STYLES — apply these classes instead of raw vars.
+   ──────────────────────────────────────────────────────────────── */
+
+.hi-display-xl,
+.hi-display-lg,
+.hi-display-md,
+.hi-display-sm,
+.hi-h1, .hi-h2, .hi-h3, .hi-h4 {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  letter-spacing: var(--type-tracking-tight);
+  color: var(--fg-1);
+  margin: 0;
+  text-wrap: balance;
+}
+.hi-display-xl { font-size: var(--fs-display-xl); line-height: var(--lh-display-xl); font-family: var(--font-display); font-weight: 400; }
+.hi-display-lg { font-size: var(--fs-display-lg); line-height: var(--lh-display-lg); }
+.hi-display-md { font-size: var(--fs-display-md); line-height: var(--lh-display-md); }
+.hi-display-sm { font-size: var(--fs-display-sm); line-height: var(--lh-display-sm); }
+.hi-h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); }
+.hi-h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); }
+.hi-h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); letter-spacing: var(--type-tracking-tight); }
+.hi-h4 { font-size: var(--fs-h4); line-height: var(--lh-h4); letter-spacing: var(--type-tracking-snug); }
+
+.hi-body-lg, .hi-body, .hi-body-sm, .hi-caption {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--fg-2);
+  margin: 0;
+}
+.hi-body-lg { font-size: var(--fs-body-lg); line-height: var(--lh-body-lg); }
+.hi-body    { font-size: var(--fs-body);    line-height: var(--lh-body); }
+.hi-body-sm { font-size: var(--fs-body-sm); line-height: var(--lh-body-sm); }
+.hi-caption { font-size: var(--fs-caption); line-height: var(--lh-caption); color: var(--fg-3); text-transform: none; }
+
+/* Subtitle eyebrow (e.g. "Палитра" above a big page title) */
+.hi-eyebrow {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg-3);
+  letter-spacing: 0;
+}
+
+.hi-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ────────────────────────────────────────────────────────────────
+   PRIMITIVES
+   ──────────────────────────────────────────────────────────────── */
+.hi-page-dark {
+  background: var(--bg-page);
+  color: var(--fg-1);
+  font-family: var(--font-ui);
+}
+
+.hi-tile {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  color: var(--fg-1);
+}
+
+.hi-tile-hairline {
+  border: var(--hairline);
+  border-radius: 0;            /* the TOC rows are hairline, NOT rounded */
+}
+
+.hi-gradient-tile {
+  background: var(--grad-brand);
+  border-radius: var(--radius-lg);
+  color: var(--fg-1);
+}

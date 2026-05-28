@@ -126,17 +126,17 @@ function Footer() {
           <div style={{ display: 'flex', gap: 24, alignItems: 'center', flex: 1 }}>
             {retailers.map(r => (
               <a key={r.alt} style={{
-                background: 'rgba(255,255,255,0.06)',
+                background: '#FFFFFF',
                 border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: 12, padding: '12px 22px',
-                cursor: 'pointer', display: 'inline-flex', alignItems: 'center',
-                height: 56,
-                transition: 'background 200ms',
+                borderRadius: 12, padding: '12px 24px',
+                cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                height: 56, minWidth: 160,
+                transition: 'background 200ms, transform 200ms cubic-bezier(.2,.8,.2,1)',
               }}
-              onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.10)'}
-              onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.06)'}
+              onMouseEnter={e => { e.currentTarget.style.background = '#F4F3F3'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
+              onMouseLeave={e => { e.currentTarget.style.background = '#FFFFFF'; e.currentTarget.style.transform = 'translateY(0)'; }}
               >
-                <img src={r.src} alt={r.alt} style={{ height: 22, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}/>
+                <img src={r.src} alt={r.alt} style={{ height: 24, width: 'auto', objectFit: 'contain' }}/>
               </a>
             ))}
           </div>
